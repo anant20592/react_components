@@ -1,11 +1,11 @@
 import { fn } from '@storybook/test';
 
-import { Button } from '../src/components';
+import { DropDown } from '../src/components';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
-  title: 'Example/Button',
-  component: Button,
+  title: 'Example/DropDown',
+  component: DropDown,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
@@ -17,36 +17,19 @@ export default {
     backgroundColor: { control: 'color' },
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-  args: { onClick: fn() },
+ // args: { onClick: fn() },
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary = {
+export const Searchable = {
   args: {
-    primary: true,
-    children: 'Button',
+    searchable: true,
+    options: ['Option 1', 'Option 2', 'Option 3'],
   },
 };
 
-export const Secondary = {
+export const NonSearchable = {
   args: {
-    children: 'Button',
-    variant: 'secondary',
-  },
-};
-
-export const Large = {
-  args: {
-    size: 'large',
-    children: 'Button',
-    variant: 'success',
-  },
-};
-
-export const Small = {
-  args: {
-    size: 'small',
-    children: 'Button',
-    variant: 'danger',
+    options: ['Option 1', 'Option 2', 'Option 3'],
   },
 };
