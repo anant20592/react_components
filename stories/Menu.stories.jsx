@@ -19,10 +19,11 @@ export default {
  // args: { onClick: fn() },
 };
 
-export const MenuWithLinks = {
+export const MenuWithData = {
     render: (args) =>  (
     <Menu {...args}>
       <MenuItem>Home</MenuItem>
+      <MenuItem>Dashboard</MenuItem>
     </Menu>
         
     )
