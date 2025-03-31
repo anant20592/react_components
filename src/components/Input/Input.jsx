@@ -13,6 +13,7 @@ const Input = ({ label, type, inputClasses, labelClasses, ...props }) => {
         className={`p-2 border rounded ${inputClasses}`} 
         value={value} 
         type={type}
+        data-testid="email"
         name={label}
         onChange={handleChange}
         {...props} 
