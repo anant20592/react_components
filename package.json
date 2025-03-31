@@ -1,36 +1,53 @@
 {
-  "name": "react_components",
-  "version": "1.0.0",
+  "name": "@anants/react_components",
+  "version": "1.0.1",
   "description": "A react based UI component library ",
-  "main": "index.js",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "exports": {
+      ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build": "vite build"
   },
-  "author": "",
+  "files": [
+        "/dist"
+  ],
+  "publishConfig": {
+      "access": "public"
+  },
+  "author": "anants",
   "license": "ISC",
-  "dependencies": {
-    "@tailwindcss/vite": "^4.0.6",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
-  },
   "devDependencies": {
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
     "@chromatic-com/storybook": "^3.2.4",
     "@storybook/addon-essentials": "^8.5.5",
     "@storybook/addon-interactions": "^8.5.5",
     "@storybook/addon-onboarding": "^8.5.5",
     "@storybook/addon-themes": "^8.5.5",
     "@storybook/blocks": "^8.5.5",
-    "@storybook/react": "^8.5.5",
-    "@storybook/react-vite": "^8.5.5",
-    "@storybook/test": "^8.5.5",
+    "@storybook/react": "^8.5.8",
+    "@storybook/react-vite": "^8.5.8",
+    "@storybook/test": "^8.5.8",
     "@tailwindcss/postcss": "^4.0.6",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.5.2",
     "prop-types": "^15.8.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "storybook": "^8.5.5",
     "tailwindcss": "^4.0.6",
     "vite": "^6.1.0"
-  }
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+}
 }
